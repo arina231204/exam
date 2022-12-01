@@ -12,6 +12,7 @@ class EmployeeForm(FlaskForm):
     experience =  ws.IntegerField('Опыт', validators=[ws.validators.DataRequired(),])
     preferred_position = ws.StringField('Предпочитаемая позиция')
     submit = ws.SubmitField('Сохранить')
+    username = ws.SelectField(User)
 
     def validate(self):
 

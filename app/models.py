@@ -35,3 +35,6 @@ class Employee(db.Model):
     user = db.relationship(User, backref=db.backref('employees', lazy='dynamic'))
     username = db.Column(db.Integer, db.ForeignKey('user.username'))
 
+    def __repr__(self):
+        return self.fullname
+
